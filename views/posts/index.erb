@@ -1,0 +1,24 @@
+<h1><%= @page_header %></h1>
+
+	<% @list.each_with_index do |post, index| %></h1>
+
+		<h2>Post Title: <%= post[:title] %></h2>
+
+		<p><%= list[:body] %></p>
+		<a href="/list/<%= index %>">View</a>
+		<h2>List Body <%= list[:body] %></h2>
+		<a href="/lists/<%= index %>">Edit</a>
+
+		<form action="/list/<%= index %>" method="POST">
+		<input type="hidden" name="_method" value="DELETE">
+		<input type="submit" value="Delete">
+		</form>
+
+<% end %>
+
+
+
+
+
+
+
